@@ -6,7 +6,7 @@ const app = express();
 
 //mongoose database configurations and connection setup..........
 mongoose.Promise = global.Promise;
-mongoose.connect(config.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, });
+mongoose.connect(config.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, }).then(() => console.log("connected")).catch((err) => console.log(err));
 
 
 
@@ -22,6 +22,6 @@ app.use(adminRoutes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
-    console.log(`Example app listening on port port!`
+    console.log(`Example app listening on port:${port}`
     )
 })

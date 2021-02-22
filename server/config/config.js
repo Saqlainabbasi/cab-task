@@ -8,7 +8,7 @@ const config = {
     },
     default: {
         SECRET: 'supersecretpassword123',
-        DATABASE: 'mongodb://localhost:27017/cabService'
+        DATABASE: 'mongodb+srv://cab-service:IU21OVV2TktrLP00@cluster0.i0rpz.mongodb.net/cabService?retryWrites=true&w=majority'
     }
 };
 //exporting the get function which return the env we are working on...
