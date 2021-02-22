@@ -18,7 +18,9 @@ app.use(bodyParser.json());
 app.use(cabRoutes);
 app.use(adminRoutes);
 
-
+app.get("/system-status", (req,res)=>{
+	return res.json({status : "Okay!"})
+})
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
